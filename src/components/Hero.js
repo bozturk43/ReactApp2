@@ -29,8 +29,8 @@ export default class Hero extends React.Component{
     render(){
         const {photos,isActive,nActive}=this.state;
         return(
-            <div className="hero" id="hero">
-                <div id="carouselExampleSlidesOnly" class="carousel-slide carousel-fade" data-bs-ride="carousel">
+            <div className="row justify-content-center" id="hero">
+                <div id="carouselExampleSlidesOnly" class="carousel-slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     {photos.map((photo,index)=>
                     <div key={index} className={index===0 ? isActive:nActive} data-interval="1000" style={{maxHeight:"500px"}}>
