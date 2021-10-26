@@ -7,7 +7,7 @@ export default class Header extends React.Component{
 render(){
     return(
         <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-primary justify-content-end">
-        <div className="container-fluid" >
+        <div className="container-fluid">
         <a class="navbar-brand" href="#">LOGO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,6 @@ render(){
             </div>
             </div>
         </nav>   
-
 
 
     )

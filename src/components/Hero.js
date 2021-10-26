@@ -1,4 +1,14 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
+import SwiperCore, {
+    Autoplay,
+    Navigation
+  } from 'swiper';
+
+  SwiperCore.use([Navigation,Autoplay]);
+
 
 export default class Hero extends React.Component{
 
@@ -30,17 +40,25 @@ export default class Hero extends React.Component{
         const {photos,isActive,nActive}=this.state;
         return(
             <div className="row justify-content-center" id="hero">
-                <div id="carouselExampleSlidesOnly" class="carousel-slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    {photos.map((photo,index)=>
-                    <div key={index} className={index===0 ? isActive:nActive} data-interval="1000" style={{maxHeight:"500px"}}>
-                    <img src={photo.urls.small} class="d-block w-100" alt="..."/>
-                  </div>
-                    )}
+                 <Swiper
+                  spaceBetween={0}
+                  slidesPerView={1}
+                  autoplay={{delay:5000}}
+                  navigation={false}
+                  onSlideChange={() => console.log("slide change")}
+                  onSwiper={(swiper) => console.log(swiper)}>
                 
-                </div>
-                </div>
+                    {photos.map((photo,index)=>
+                    <SwiperSlide>
+                    <div className="row justify-content-center" style={{maxHeight:"500px"}} >
+                    <img src={photo.urls.small} class="d-block w-100" alt="..."/>
+                    </div>
+                    </SwiperSlide>
+                                    )}
+                
+            </Swiper>
             </div>
+
         )
     }
 

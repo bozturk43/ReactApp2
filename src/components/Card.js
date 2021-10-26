@@ -5,10 +5,8 @@ function Card(props) {
 
     let animatedItem=useRef(null);
 
-    console.log(animatedItem)
 
     useEffect(()=>{
-        console.log(animatedItem)
 
         TweenMax.to(
             animatedItem, 3,
