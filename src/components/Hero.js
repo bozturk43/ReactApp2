@@ -50,7 +50,7 @@ export default class Hero extends React.Component{
                 
                     {photos.map((photo,index)=>
                     <SwiperSlide>
-                    <div className="row justify-content-center" style={{maxHeight:"500px"}} >
+                    <div className="row justify-content-center" style={{maxHeight:"700px"}} >
                     <img src={photo.urls.small} class="d-block w-100" alt="..."/>
                     </div>
                     </SwiperSlide>
