@@ -55,7 +55,7 @@ const App=()=>{
 
   return (  
       <>    
-    <div><Header></Header></div>
+    <Header></Header>
     <div><Hero></Hero></div>
     <div  ref={sectionRef} className="servicesdiv" style={{marginTop:"60px"}}><Services></Services></div>
     <div><About></About></div>

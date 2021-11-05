@@ -11,20 +11,21 @@ export default class Services extends React.Component{
         }
     }      
     componentDidMount(){
-        fetch("https://api.unsplash.com/photos/?client_id=qXevhspOUxOCExHkzs1jrl4ewvtpv-TuuwdK4EhREhk")
+        fetch("http://localhost/php_rest_fztwebsite/api/post/read.php")
             .then(res=>res.json())
             .then(data=>{
                 this.setState({
                     isLoaded:true,
-                    photos:data,
-                   
+                    photos:data,             
                 });
             }
             );
+
     }
 
     render(){
         const {photos}=this.state;
+        console.log(photos)
         return(
             <div className="row justify-content-center" id="services" style={{backgroundColor:"cornflowerblue"}}>
                 <h1 style={{fontFamily:"'Oswald',sans-serif",textAlign:"center",marginTop:"10px",marginBotton:"10px"}}>TERAPİLER</h1>
