@@ -23,7 +23,7 @@ function Card(props) {
 
     return (
         <div ref={el=>{animatedItem=el}} key={props.data.id} class="card" style={{width:"18rem",marginTop:"30px",marginLeft:"10px",opacity:"0"}}>
-        <img src={props.data.image} class="card-img-top" alt="..." style={{width:"265px",height:"200px",paddingTop:"10px"}}/>
+        <img src={"http://localhost/php_rest_fztwebsite/api/post/images/"+props.data.resim} class="card-img-top" alt="..." style={{width:"265px",height:"200px",paddingTop:"10px"}}/>
         <div class="card-body">
             <h5 class="card-title">{props.data.baslik}</h5>
             <p class="card-text">{props.data.icerik}</p>
